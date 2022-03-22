@@ -1,11 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import { AppRouter } from "./routingSetup";
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <AppRouter />
   );
 }
 
