@@ -89,12 +89,7 @@ const NavbarContainer = styled.div`
     height: 100%;
     width: 100vw;
     background-color: transparent;
-    /* z-index: 5; */
     position: relative;
-    /* right: 0;
-    bottom: 0;
-    top: 0;
-    left: 0; */
   }
 `;
 const NavContainer = styled.div`

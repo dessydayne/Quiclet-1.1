@@ -10,7 +10,6 @@ import { useNavigate } from "react-router-dom";
 import { Navbar, MobileNavigation } from "../components/navbar";
 
 const LandingPage = () => {
- 
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/mail_collection");
@@ -18,11 +17,9 @@ const LandingPage = () => {
 
   return (
     <>
-    
-
       <Container>
         <Wrapper>
-          <Navbar/>          
+          <Navbar />
           <BodyWrapper>
             <TextWrapper>
               <CaptionPhrase>
@@ -63,23 +60,28 @@ const LandingPage = () => {
         <MobileNavigation />
 
         <MoblileBodyWrapper>
-          <MobileCatchPhrase>Rent your House online. For real.</MobileCatchPhrase>
+          <MobileCatchPhrase>
+            Rent your House online. For real.
+          </MobileCatchPhrase>
           <MobileHeaderBox>
             <MobileHeaderText>Choose. Pay. Move</MobileHeaderText>
           </MobileHeaderBox>
-          <MobileUseCaseList>With our platform you can  inspect more houses in less time, enjoy flexible payments options and  move in when you want to.</MobileUseCaseList>
+          <MobileUseCaseList>
+            With our platform you can inspect more houses in less time, enjoy
+            flexible payments options and move in when you want to.
+          </MobileUseCaseList>
           <MobileImageBox src={mobile_image_item} />
           <MobileTextBox>
             <MobileSpark src={mobileSparkImage} />
             <MobileText>The easiest way to rent your apartment</MobileText>
           </MobileTextBox>
           <MobileButtonWrapper>
-            <MobileButton>Get early access</MobileButton>
+            <MobileButton onClick={() => handleClick()}>
+              Get early access
+            </MobileButton>
           </MobileButtonWrapper>
         </MoblileBodyWrapper>
       </MobileContainer>
-
-
     </>
   );
 };
@@ -302,30 +304,29 @@ const MobileContainer = styled.main`
     display: block;
     background-color: #faede2;
     padding: 35px 75px;
-}
+  }
   @media screen and (max-width: 445px) {
     padding: 35px 45px;
-}
+  }
   @media screen and (max-width: 400px) {
     padding: 25px 25px;
-}
-
+  }
 `;
 const MoblileBodyWrapper = styled.section`
   margin: 35px 0;
 `;
 const MobileCatchPhrase = styled.p`
-  font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 21px;
-letter-spacing: -0.045em;
-color: #080B0C;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: -0.045em;
+  color: #080b0c;
 `;
 const MobileHeaderBox = styled.div`
-  background: #182D15;
-  border: 3px solid #FFFFFF;
+  background: #182d15;
+  border: 3px solid #ffffff;
   box-sizing: border-box;
   box-shadow: 20px 4px 8px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
@@ -333,23 +334,23 @@ const MobileHeaderBox = styled.div`
   margin: 35px 0;
 `;
 const MobileHeaderText = styled.h2`
-  font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: 26px;
-line-height: 126%;
-text-align: justify;
-letter-spacing: 0.01em;
-text-transform: capitalize;
-color: #FDFBF8;
-text-align-last: justify;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 126%;
+  text-align: justify;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  color: #fdfbf8;
+  text-align-last: justify;
 
-@media screen and (max-width: 330px) {
-  font-size: 24px;
+  @media screen and (max-width: 330px) {
+    font-size: 24px;
   }
 `;
 const MobileUseCaseList = styled.p`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -358,8 +359,7 @@ const MobileUseCaseList = styled.p`
   align-items: center;
   text-align: justify;
   letter-spacing: -0.05em;
-  color: #111E0F;
-
+  color: #111e0f;
 `;
 const MobileImageBox = styled.img`
   width: 100%;
@@ -370,28 +370,28 @@ const MobileTextBox = styled.div`
 `;
 
 const MobileSpark = styled.img`
-position: absolute;
-top: -27%;
-left: -2.5%;
+  position: absolute;
+  top: -27%;
+  left: -2.5%;
 
-@media screen and (max-width: 592px){
-  top: -24%;
-  left: -3.5%;
-}
-@media screen and (max-width: 504px){
-  top: 42%;
-  left: -4.5%;
-}
+  @media screen and (max-width: 592px) {
+    top: -24%;
+    left: -3.5%;
+  }
+  @media screen and (max-width: 504px) {
+    top: 42%;
+    left: -4.5%;
+  }
 `;
 
 const MobileText = styled.p`
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
   text-align: justify;
-  color: #111E0F;
+  color: #111e0f;
 `;
 const MobileButtonWrapper = styled.div`
   text-align: center;
@@ -399,11 +399,11 @@ const MobileButtonWrapper = styled.div`
 `;
 const MobileButton = styled.button`
   border: none;
-  background: #111E0F;
+  background: #111e0f;
   border-radius: 5px;
   padding: 13px 30px;
-  color: #EBE5E5;
-  font-family: 'Poppins';
+  color: #ebe5e5;
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
