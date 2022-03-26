@@ -1,11 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import mailImage from "../assets/add_email.svg";
 import logo_image from "../assets/full_logo.svg";
 
 export const MailCollection = () => {
+  const navigate = useNavigate()
+  const handleClick = () => {
+    navigate("/successMessage")
+  }
   return (
     <Container>
+      <Wrapper>
+
       <LogoBox>
         <Logo src={logo_image} />
       </LogoBox>
@@ -22,11 +29,12 @@ export const MailCollection = () => {
                 promise.
               </FormPhrase>
               <InputField placeholder="whats your mail?" />
-              <FormButton>Submit</FormButton>
+              <FormButton onClick={handleClick}>Submit</FormButton>
             </FormSection>
           </FormWrapper>
         </FormBox>
       </PsedoBox>
+      </Wrapper>
       <MobileView>
         <FormHeader>Be the first to know!</FormHeader>
         <MobilePsedoBox>
@@ -35,7 +43,7 @@ export const MailCollection = () => {
           </MobileImageBox>
         </MobilePsedoBox>
         <InputField placeholder="whats your mail?" />
-        <FormButton>Submit</FormButton>
+        <FormButton onClick={handleClick}>Submit</FormButton>
       </MobileView>
     </Container>
   );
@@ -52,6 +60,12 @@ const Container = styled.div`
   @media screen and (max-width: 1000px) {
     height: 100%;
   }
+`;
+const Wrapper = styled.div`
+@media screen and (min-width: 1440px) {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 `;
 const LogoBox = styled.div``;
 const Logo = styled.img``;
@@ -168,9 +182,13 @@ const FormButton = styled.button`
 `;
 
 const MobileView = styled.div`
+display: none;
+
+@media screen and (max-width: 768px) {
   max-width: 310px;
   margin: auto;
   margin: 30px auto;
+  }
   @media screen and (max-width: 425px) {
     max-width: 100%;
     margin: 20px auto;

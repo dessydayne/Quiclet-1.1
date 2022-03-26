@@ -123,7 +123,11 @@ const NavItem = styled.div`
   display: flex;
   align-items: center;
 `;
-const NavIcon = styled.img``;
+const NavIcon = styled.img`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
 const NavTitle = styled.p`
   font-family: "Poppins";
   font-style: normal;
@@ -150,10 +154,13 @@ const SocialMedia = styled.div`
 `;
 
 const SocialMediaIcon = styled.div`
-  background: #010101;
-  border-radius: 25px;
-  padding: 8px;
-  margin: auto 10px;
+    background: #010101;
+    border-radius: 25px;
+    padding: 11px 10px;
+    margin: auto 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 const Icon = styled.img`
   width: 23px;

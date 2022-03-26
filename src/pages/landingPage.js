@@ -23,7 +23,7 @@ const LandingPage = () => {
           <BodyWrapper>
             <TextWrapper>
               <CaptionPhrase>
-                Rent your choice house online now. For real.
+                Rent your House online. For real.
               </CaptionPhrase>
               <HeaderBox>
                 <HeaderText>
@@ -93,6 +93,7 @@ const Container = styled.main`
   height: 100vh;
   background-color: #faede2;
 
+  
   @media screen and (max-width: 787px) {
     display: none;
   }
@@ -102,7 +103,10 @@ const Wrapper = styled.div`
   padding: 10px 70px;
   padding-top: 25px;
   background-color: #faede2;
-
+  @media screen and (min-width: 1440px) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
   @media screen and (max-width: 822px) {
     padding: 10px 52px;
   }
